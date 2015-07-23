@@ -15,6 +15,7 @@ describe('Zeller', function(){
     zeller.calculate(10,10,1984).should.equal(4);
     zeller.calculate(11, 3, 2043).should.equal(3);
     zeller.calculate(5, 18, 1921).should.equal(4);
+    zeller.calculate(10, 1, 2015).should.equal(5);
   })
 });
 
