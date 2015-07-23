@@ -1,0 +1,28 @@
+{
+  "name": "node-cal",
+  "version": "1.0.0",
+  "description": "Node command line calendar application",
+  "main": "node-cal.js",
+  "scripts": {
+    "test": "mocha --recursive test/unit",
+    "test-integration": "mocha --recursive test/integration",
+    "test-cov": "istanbul cover _mocha -- --recursive",
+    "codeclimate-coverage": "codeclimate-test-reporter < ./coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnwquarles/node-cal.git"
+  },
+  "author": "johnwquarles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnwquarles/node-cal/issues"
+  },
+  "homepage": "https://github.com/johnwquarles/node-cal#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "codeclimate-test-reporter": "^0.1.0",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5"
+  }
+}
