@@ -29,3 +29,11 @@ describe('writeMonth', function() {
     makeMonth.isLeap(1872).should.equal(true);
   })
 });
+
+describe('makecal', function() {
+  var makecal = require(path.join(process.cwd() + '/lib/makecal'));
+  it('should print error messages when provided with invalid input', function(){
+    makecal.makeCal([1600]).should.equal("err");
+    makecal.makeCal([13, 2006]).should.equal("err");
+  })
+});
