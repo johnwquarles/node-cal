@@ -28,6 +28,9 @@ describe('writeMonth', function() {
     makeMonth.isLeap(2100).should.equal(false);
     makeMonth.isLeap(1872).should.equal(true);
   })
+  it('should, well, write a month', function(){
+    makeMonth.writeMonth(12, 2005).should.equal("worked");
+  })
 });
 
 describe('makecal', function() {
