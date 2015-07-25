@@ -29,6 +29,7 @@ describe('writeMonth', function() {
     makeMonth.isLeap(1872).should.equal(true);
   })
   it('should write a month', function(){
+    makeMonth.Y = false;
     makeMonth.writeMonth(12, 2005).should.equal("worked");
   })
   it('should dump output into buckets for use by the makeYear module when its Y attribute is true', function(){
