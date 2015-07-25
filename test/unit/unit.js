@@ -31,6 +31,10 @@ describe('writeMonth', function() {
   it('should write a month', function(){
     makeMonth.writeMonth(12, 2005).should.equal("worked");
   })
+  it('should dump output into buckets for use by the makeYear module when its Y attribute is true', function(){
+    makeMonth.Y = true;
+    makeMonth.writeMonth(12, 2005).should.equal("worked");
+  })
 });
 
 describe('makecal', function() {
@@ -38,5 +42,10 @@ describe('makecal', function() {
   it('should print error messages when provided with invalid input', function(){
     makecal.makeCal([1600]).should.equal("err");
     makecal.makeCal([13, 2006]).should.equal("err");
+  })
+  it('shouldn\'t print error messages when provided with valid input', function(){
+    makecal.makeCal([1800]).should.equal("worked");
+    makecal.makeCal([12, 2006]).should.equal("worked");
+    makecal.makeCal([]).should.equal("worked");
   })
 });
