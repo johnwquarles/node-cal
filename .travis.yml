@@ -5,3 +5,5 @@ script:
   - npm run test-cov
 after_success:
   - npm run codeclimate-coverage
+notifications:
+  email: false
