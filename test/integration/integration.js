@@ -50,8 +50,8 @@ describe('CLI', function() {
   });
   describe('Usage', function () {
     it('should print help for bad arguments', function (done) {
-      testCalError(10000, done);
-      testCalError('13 2015', done);
+      testCalError(10000);
+      testCalError('13 2015');
       testCalError('asdf', done);
     });
   });
@@ -79,7 +79,7 @@ function testCalError(arg, done) {
     var lastErr = err;
     cp.exec('./node-cal.js' + " " + arg, function(err, output) {
       output.should.equal(lastErr.toString().split("\n")[1] + "\n");
-      done();
+      done && done();
     })
   })
 }
